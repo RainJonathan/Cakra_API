@@ -4,3 +4,4 @@ torchvision
 torchaudio
 Flask-Cors
 transformers
+langdetect
