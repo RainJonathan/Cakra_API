@@ -53,6 +53,8 @@ def summarize():
 
         final_result = translator.translate(summary, target_language=detected_language)
         processed_data.append(final_result)
+    client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    print(f"Request received from IP: {client_ip}")
 
     # Return a response
     return jsonify({'error': False, 'message': 'Data Processed Successfully', 'processed_data': processed_data})
